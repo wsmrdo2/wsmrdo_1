@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도원석 | Audio Research Director</title>
     <meta name="description" content="주식회사 후본 연구소장 도원석의 포트폴리오. 3D 입체 음향 및 MR 오디오 전문가로서 몰입형 사운드 경험을 설계합니다.">
-    
+
     <!-- Fonts -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -27,6 +30,7 @@
                 <a href="#about">About</a>
                 <a href="#expertise">Expertise</a>
                 <a href="#projects">Projects</a>
+                <a href="#tetris">Tetris</a>
                 <a href="#contact">Contact</a>
                 <a href="#contact" class="btn-hire">HIRE ME</a>
             </div>
@@ -44,6 +48,7 @@
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#projects">Projects</a>
+        <a href="#tetris">Tetris</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -59,7 +64,7 @@
                 <span class="text-gradient">20년의 집념</span>, 도원석입니다.
             </h1>
             <p>주식회사 후본 연구소장 | 3D 입체 음향 및 MR 오디오 전문가 <br>
-               사용자 중심의 몰입형 사운드 경험을 설계합니다.</p>
+                사용자 중심의 몰입형 사운드 경험을 설계합니다.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn-primary">
                     View Portfolio <i data-lucide="arrow-right"></i>
@@ -75,7 +80,7 @@
             <div class="section-header reveal">
                 <h2>About Me</h2>
                 <p>20년 경력의 베테랑 엔지니어로서,<br class="hidden-mobile">
-                   하드웨어와 소프트웨어를 아우르는 오디오 솔루션을 설계합니다.</p>
+                    하드웨어와 소프트웨어를 아우르는 오디오 솔루션을 설계합니다.</p>
             </div>
             <div class="grid-3">
                 <div class="card reveal" style="transition-delay: 0s;">
@@ -199,6 +204,58 @@
         </div>
     </section>
 
+    <!-- Tetris Section -->
+    <section id="tetris" class="section bg-subtle">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Tetris Game</h2>
+                <p>잠시 쉬어가는 시간. <br class="hidden-mobile"> 고전 게임의 대명사 테트리스를 즐겨보세요.</p>
+            </div>
+
+            <div class="tetris-wrapper reveal">
+                <div class="tetris-game">
+                    <canvas id="tetrisCanvas" width="240" height="400"></canvas>
+                    <div class="tetris-overlay" id="tetrisOverlay">
+                        <div class="overlay-content">
+                            <h3 id="overlayTitle">Tetris</h3>
+                            <button id="startBtn" class="btn-primary">Game Start</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tetris-stats">
+                    <div class="stats-box">
+                        <span class="label">Score</span>
+                        <span class="value" id="score">0</span>
+                    </div>
+                    <div class="stats-box">
+                        <span class="label">Next Piece</span>
+                        <canvas id="nextCanvas" width="80" height="80"></canvas>
+                    </div>
+                    <div class="controls-info">
+                        <h4>Controls</h4>
+                        <div class="control-row">
+                            <span>Move</span>
+                            <span class="key-box">← →</span>
+                        </div>
+                        <div class="control-row">
+                            <span>Rotate</span>
+                            <span class="key-box">↑</span>
+                        </div>
+                        <div class="control-row">
+                            <span>Down</span>
+                            <span class="key-box">↓</span>
+                        </div>
+                        <div class="control-row">
+                            <span>Drop</span>
+                            <span class="key-box">Space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
@@ -207,7 +264,7 @@
                     <div class="contact-info">
                         <h2>Let's Connect</h2>
                         <p>기술 자문 및 협업 관련 문의는 언제든 환영합니다.<br>
-                           새로운 청각 경험을 함께 만들어갑시다.</p>
+                            새로운 청각 경험을 함께 만들어갑시다.</p>
                         <div class="info-items">
                             <div class="info-item">
                                 <div class="info-icon"><i data-lucide="mail"></i></div>
@@ -256,5 +313,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="tetris.js"></script>
 </body>
+
 </html>
